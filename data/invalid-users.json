@@ -1,0 +1,32 @@
+[
+  {
+    "description": "Invalid credentials",
+    "username": "fake_user",
+    "password": "fake_pass",
+    "expectedError": "Username and password do not match"
+  },
+  {
+    "description": "Blank username",
+    "username": null,
+    "password": "secret_sauce",
+    "expectedError": "Username is required"
+  },
+  {
+    "description": "Blank password",
+    "username": "standard_user",
+    "password": null,
+    "expectedError": "Password is required"
+  },
+  {
+    "description": "Both fields blank",
+    "username": null,
+    "password": null,
+    "expectedError": "Username is required"
+  },
+  {
+    "description": "Locked out user login attempt",
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "expectedError": "Sorry, this user has been locked out."
+  }
+]
